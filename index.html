@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Gupta Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="header-name">Sean Gupta</h1>
+        <p class="tagline">
+            Emergency response strengthened my resilience and critical thinking skills, which I now bring to solving
+            complex problems in code.
+        </p>
+    </header>
+
+    <main class="main-site-content">
+        <nav>
+            <ul>
+                <li><a href="#about">about me</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2 class="header-section">about me</h2>
+            <div id="about-content-container">Loading...</div>
+
+            <script>
+                fetch('about.txt')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('about-content-container').innerText = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching the text file:', error);
+                        document.getElementById('about-content-container').innerText = 'Failed to load content.';
+                    });
+            </script>
+        </section>
+
+        <section id="skills">
+            <h2 class="header-section">skills</h2>
+            <div class="div-skills-container">
+                <section class="section-skills-block">
+                    <h4 class="header-skills-block">programming languages</h4>
+                    <ul class="ul-skills-block">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>C++</li>
+                    </ul>
+                </section>
+                <section class="section-skills-block">
+                    <h4 class="header-skills-block">python libraries & frameworks</h4>
+                    <ul class="ul-skills-block">
+                        <li>scikit-learn</li>
+                        <li>numpy</li>
+                        <li>matplotlib</li>
+                        <li>seaborn</li>
+                        <li>yellowbrick</li>
+                        <li>flask</li>
+                        <li>flask-mysqldb</li>
+                    </ul>
+                </section>
+                <section class="section-skills-block">
+                    <h4 class="header-skills-block">tools & technologies</h4>
+                    <ul class="ul-skills-block">
+                        <li>VS Code</li>
+                        <li>Jupyter Notebooks</li>
+                        <li>Eclipse</li>
+                        <li>GitHub</li>
+                        <li>Conda</li>
+                    </ul>
+                </section>
+                <section class="section-skills-block">
+                    <h4 class="header-skills-block">computer science fundamentals</h4>
+                    <ul class="ul-skills-block">
+                        <li>Data structures</li>
+                        <li>Sorting & searching algorithms</li>
+                        <li>Recursion</li>
+                        <li>Big-O analysis</li>
+                    </ul>
+                </section>
+                <section class="section-skills-block">
+                    <h4 class="header-skills-block">databases</h4>
+                    <ul class="ul-skills-block">
+                        <li>MySQL</li>
+                    </ul>
+                </section>
+                <section class="section-skills-block">
+                    <h4 class="header-skills-block">soft skills</h4>
+                    <ul class="ul-skills-block">
+                        <li>Collaboration & teamwork</li>
+                        <li>Problem-solving & critical thinking</li>
+                        <li>Adaptability</li>
+                        <li>Communication</li>
+                        <li>Leadership mindset</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="header-section">projects</h2>
+            <section class="section-project">
+                <h3 class="header-project-section">machine learning</h3>
+
+                <p>Coming soon...</p>
+            </section>
+
+            <section class="section-project">
+                <h3 class="header-project-section">data science & analytics</h3>
+
+                <p>Coming soon...</p>
+            </section>
+
+            <section class="section-project">
+                <h3 class="header-project-section">software engineering</h3>
+
+                <article class="article-project">
+                    <h4 class="header-project-title">netword attached storage linux web server <span
+                            class="span-project-team">team project</span></h4>
+                    <p class="p-project-description">
+                        Our team of five students created a Linux based network attached storage web server to allow
+                        users
+                        to create an account and store files. We implemented admin control, monitoring, oversight, and
+                        system backups.
+                    </p>
+                    <div class="div-project-skills-container">
+                        <p class="p-project-skills-text">skills demonstrated:</p>
+                        <ul class="ul-project-skills-list">
+                            <li>Collaboration & teamwork</li>
+                            <li>Problem-solving & critical thinking</li>
+                            <li>Adaptability</li>
+                            <li>Communication</li>
+                            <li>Leadership mindset</li>
+                            <li>MySQL</li>
+                            <li>flask</li>
+                            <li>flask-mysqldb</li>
+                            <li>Recursion</li>
+                            <li>GitHub</li>
+                            <li>VS Code</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <a class="action"
+                        href="https://github.com/seangupta1/Network-Attached-Storage-Linux-Web-Server">explore the
+                        repository</a>
+                </article>
+            </section>
+
+            <section class="section-project">
+                <h3 class="header-project-section">algorithms & data structures</h3>
+
+                <article class="article-project">
+                    <h4 class="header-project-title">m-ary tree k labeling<span class="span-project-team">team
+                            project</span></h4>
+                    <p class="p-project-description">
+                        In this project, our team of three students implement an algorithm to solve the problem of
+                        assigning labels to the vertices of an m-ary tree while
+                        maintaining unique edge weights and vertex label constraints.
+                    </p>
+                    <div class="div-project-skills-container">
+                        <p class="p-project-skills-text">skills demonstrated:</p>
+                        <ul class="ul-project-skills-list">
+                            <li>Collaboration & teamwork</li>
+                            <li>Problem-solving & critical thinking</li>
+                            <li>Communication</li>
+                            <li>Data structures</li>
+                            <li>Recursion</li>
+                            <li>VS Code</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <a class="action" href="https://github.com/seangupta1/m-ary-tree-labeling">explore the
+                        repository</a>
+                </article>
+
+                <article class="article-project">
+                    <h4 class="header-project-title">B+ tree</h4>
+                    <p class="p-project-description">
+                        Created a B+ tree and inserted the 1,000 most common words. Then, searched the tree for a given
+                        word.
+                    </p>
+                    <div class="div-project-skills-container">
+                        <p class="p-project-skills-text">skills demonstrated:</p>
+                        <ul class="ul-project-skills-list">
+                            <li>Recursion</li>
+                            <li>VS Code</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <a class="action" href="https://github.com/seangupta1/B-Plus-Tree">explore the repository</a>
+                </article>
+
+                <article class="article-project">
+                    <h4 class="header-project-title">linear data structures comparison</h4>
+                    <p class="p-project-description">This experiment implements and compares the performance of Python's
+                        built-in list, singly linked
+                        lists, and
+                        doubly
+                        linked lists.
+                    </p>
+                    <div class="div-project-skills-container">
+                        <p class="p-project-skills-text">skills demonstrated:</p>
+                        <ul class="ul-project-skills-list">
+                            <li>VS Code</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <a class="action" href="https://github.com/seangupta1/Linear-Data-Structures-Comparison">explore the
+                        repository</a>
+                </article>
+
+                <article class="article-project">
+                    <h4 class="header-project-title">search algorithms comparison</h4>
+                    <p class="p-project-description">
+                        An experiment implementing and comparing the performance of linear, sentinel, binary, and
+                        ternary search
+                        algorithms.
+                    </p>
+                    <div class="div-project-skills-container">
+                        <p class="p-project-skills-text">skills demonstrated:</p>
+                        <ul class="ul-project-skills-list">
+                            <li>Sorting & searching algorithms</li>
+                            <li>Recursion</li>
+                            <li>Big-O analysis</li>
+                            <li>VS Code</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <a class="action" href="https://github.com/seangupta1/Search-Algorithms-Comparison">explore the
+                        repository</a>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <a class="a-contact" href="tel:9136874871">(913)-687-4871</a>
+        <a class="a-contact" href="mailto:seangupta1@outlook.com">seangupta1@outlook.com</a>
+        <p>&copy; 2025 Sean Gupta. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

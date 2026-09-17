@@ -163,14 +163,8 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     padding: 15px 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
     /* Prevent padding from overflowing */
-}
-
-.section-skills-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .ul-skills-block {
@@ -195,12 +189,6 @@ nav ul li a:hover {
     }
 
     .section-skills-block {
-        transition: none;
-    }
-
-    .section-skills-block:hover {
-        transform: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .ul-skills-block {}
@@ -248,12 +236,6 @@ nav ul li a:hover {
     margin-top: 0;
     margin-bottom: 15px;
     padding: 10px 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.article-project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .header-project-title {

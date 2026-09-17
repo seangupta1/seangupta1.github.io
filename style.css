@@ -43,14 +43,15 @@ body {
 header {
     border-bottom: 3px double var(--secondary-darker);
     text-align: center;
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .header-name {
     margin: 0 0 5px 0;
     padding: 0;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .header-credential {

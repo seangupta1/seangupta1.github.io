@@ -1,410 +1,507 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sean Gupta Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="header-name">Sean Gupta</h1>
+      <h1 class="header-name">Sean Gupta</h1>
     </header>
 
     <main class="main-site-content">
-        <nav>
-            <ul>
-                <li><a href="#about">about me</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#projects">projects</a></li>
+      <nav>
+        <ul>
+          <li><a href="#about">about me</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#projects">projects</a></li>
+        </ul>
+      </nav>
+
+      <section id="about">
+        <h2 class="header-section">about me</h2>
+        <div id="about-content-container">Loading...</div>
+
+        <script>
+          fetch("about.txt")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("about-content-container").innerText =
+                data;
+            })
+            .catch((error) => {
+              console.error("Error fetching the text file:", error);
+              document.getElementById("about-content-container").innerText =
+                "Failed to load content.";
+            });
+        </script>
+      </section>
+
+      <section id="skills">
+        <h2 class="header-section">skills</h2>
+        <div class="div-skills-container">
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">programming languages</h4>
+            <ul class="ul-skills-block">
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>C++</li>
             </ul>
-        </nav>
+          </section>
 
-        <section id="about">
-            <h2 class="header-section">about me</h2>
-            <div id="about-content-container">Loading...</div>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">web frameworks</h4>
+            <ul class="ul-skills-block">
+              <li>Flask</li>
+              <li>FastAPI</li>
+              <li>Django</li>
+              <li>React</li>
+            </ul>
+          </section>
 
-            <script>
-                fetch('about.txt')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('about-content-container').innerText = data;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the text file:', error);
-                        document.getElementById('about-content-container').innerText = 'Failed to load content.';
-                    });
-            </script>
-        </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">databases</h4>
+            <ul class="ul-skills-block">
+              <li>MySQL</li>
+              <li>SQLite</li>
+            </ul>
+          </section>
 
-        <section id="skills">
-            <h2 class="header-section">skills</h2>
-            <div class="div-skills-container">
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">programming languages</h4>
-                    <ul class="ul-skills-block">
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>C++</li>
-                    </ul>
-                </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">IoT & embedded systems</h4>
+            <ul class="ul-skills-block">
+              <li>ESP32</li>
+              <li>Arduino</li>
+              <li>Bluetooth</li>
+              <li>Sensor integration</li>
+              <li>Communication protocols</li>
+              <li>IoT data collection</li>
+              <li>Device-to-server communication</li>
+            </ul>
+          </section>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">web frameworks</h4>
-                    <ul class="ul-skills-block">
-                        <li>Flask</li>
-                        <li>FastAPI</li>
-                        <li>Django</li>
-                        <li>React</li>
-                    </ul>
-                </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">tools & technologies</h4>
+            <ul class="ul-skills-block">
+              <li>VS Code</li>
+              <li>Jupyter Notebooks</li>
+              <li>Eclipse</li>
+              <li>Git</li>
+              <li>Conda</li>
+              <li>Docker</li>
+              <li>GitHub Copilot</li>
+            </ul>
+          </section>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">databases</h4>
-                    <ul class="ul-skills-block">
-                        <li>MySQL</li>
-                        <li>SQLite</li>
-                    </ul>
-                </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">AI & machine learning</h4>
+            <ul class="ul-skills-block">
+              <li>Deep learning</li>
+              <li>Computer vision</li>
+              <li>Object detection</li>
+              <li>Object tracking</li>
+              <li>Image classification</li>
+              <li>Language model development</li>
+              <li>Retrieval-Augmented Generation (RAG)</li>
+              <li>LoRA fine-tuning</li>
+              <li>Model evaluation</li>
+              <li>Grad-CAM</li>
+            </ul>
+          </section>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">IoT & embedded systems</h4>
-                    <ul class="ul-skills-block">
-                        <li>ESP32</li>
-                        <li>Arduino</li>
-                        <li>Sensor integration</li>
-                        <li>Communication protocols</li>
-                        <li>IoT data collection</li>
-                        <li>Device-to-server communication</li>
-                    </ul>
-                </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">
+              Python machine learning libraries
+            </h4>
+            <h5 class="header-skills-block"></h5>
+            <ul class="ul-skills-block">
+              <li>Scikit-learn</li>
+              <li>PyTorch</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Matplotlib</li>
+              <li>Seaborn</li>
+              <li>Yellowbrick</li>
+            </ul>
+          </section>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">tools & technologies</h4>
-                    <ul class="ul-skills-block">
-                        <li>VS Code</li>
-                        <li>Jupyter Notebooks</li>
-                        <li>Eclipse</li>
-                        <li>Git</li>
-                        <li>Conda</li>
-                        <li>Docker</li>
-                        <li>GitHub Copilot</li>
-                    </ul>
-                </section>
-                
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">AI & machine learning</h4>
-                    <ul class="ul-skills-block">
-                        <li>Deep learning</li>
-                        <li>Computer vision</li>
-                        <li>Object detection</li>
-                        <li>Object tracking</li>
-                        <li>Image classification</li>
-                        <li>Language model development</li>
-                        <li>Retrieval-Augmented Generation (RAG)</li>
-                        <li>LoRA fine-tuning</li>
-                        <li>Model evaluation</li>
-                        <li>Grad-CAM</li>
-                    </ul>
-                </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">computer science fundamentals</h4>
+            <ul class="ul-skills-block">
+              <li>Data structures</li>
+              <li>Sorting & searching algorithms</li>
+              <li>Recursion</li>
+              <li>Big-O analysis</li>
+            </ul>
+          </section>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">python machine learning libraries</h4>
-                    <h5 class="header-skills-block"></h5>
-                    <ul class="ul-skills-block">
-                        <li>Scikit-learn</li>
-                        <li>PyTorch</li>
-                        <li>NumPy</li>
-                        <li>Pandas</li>
-                        <li>Matplotlib</li>
-                        <li>Seaborn</li>
-                        <li>Yellowbrick</li>
-                    </ul>
-                </section>
+          <section class="section-skills-block">
+            <h4 class="header-skills-block">soft skills</h4>
+            <ul class="ul-skills-block">
+              <li>Collaboration & teamwork</li>
+              <li>Problem-solving & critical thinking</li>
+              <li>Adaptability</li>
+              <li>Communication</li>
+              <li>Leadership mindset</li>
+            </ul>
+          </section>
+        </div>
+      </section>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">computer science fundamentals</h4>
-                    <ul class="ul-skills-block">
-                        <li>Data structures</li>
-                        <li>Sorting & searching algorithms</li>
-                        <li>Recursion</li>
-                        <li>Big-O analysis</li>
-                    </ul>
-                </section>
+      <section id="projects">
+        <h2 class="header-section">projects</h2>
+        <section class="section-project">
+          <h3 class="header-project-section">software engineering</h3>
 
-                <section class="section-skills-block">
-                    <h4 class="header-skills-block">soft skills</h4>
-                    <ul class="ul-skills-block">
-                        <li>Collaboration & teamwork</li>
-                        <li>Problem-solving & critical thinking</li>
-                        <li>Adaptability</li>
-                        <li>Communication</li>
-                        <li>Leadership mindset</li>
-                    </ul>
-                </section>
+          <article class="article-project">
+            <h4 class="header-project-title">
+              pinnacle technology internship - morelia Python library
+            </h4>
+            <p class="p-project-description">
+              Expanded Pinnacle Technology’s public Python library, Morelia,
+              which provides hardware control and EEG data acquisition
+              capabilities. Added complete support for newer Bluetooth EEG
+              devices, extending the API beyond its current wired device
+              support. Developed mock EEG devices and automated unit tests to
+              support continuous integration and improve test coverage.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>Python</li>
+                <li>Bluetooth</li>
+                <li>Communication protocols</li>
+                <li>Git</li>
+                <li>GitHub Copilot</li>
+                <li>Problem-solving & critical thinking</li>
+              </ul>
             </div>
+            <p>
+              <a
+                class="action"
+                href="https://github.com/Pinnacle-Technology/Morelia"
+                >Click here to explore the repository</a
+              >
+            </p>
+          </article>
+
+          <article class="article-project">
+            <h4 class="header-project-title">
+              network attached storage linux web server
+              <span class="span-project-team">team project</span>
+            </h4>
+            <p class="p-project-description">
+              Our team of five students created a Linux-based network attached
+              storage web server to allow users to create an account and store
+              files. We implemented admin control, monitoring, oversight, and
+              system backups.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>Collaboration & teamwork</li>
+                <li>Problem-solving & critical thinking</li>
+                <li>Adaptability</li>
+                <li>Communication</li>
+                <li>Leadership mindset</li>
+                <li>MySQL</li>
+                <li>Flask</li>
+                <li>Recursion</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <a
+              class="action"
+              href="https://github.com/seangupta1/Network-Attached-Storage-Linux-Web-Server"
+              >click here to explore the repository</a
+            >
+          </article>
+
+          <article class="article-project">
+            <h4 class="header-project-title">
+              IoT Environment Monitoring System & Web App<span
+                class="span-project-team"
+                >team project</span
+              >
+            </h4>
+            <p class="p-project-description">
+              Our team developed an IoT environmental monitoring system and web
+              app using an ESP32 with temperature and humidity sensors to
+              collect and transmit data. We implemented a Flask-based web
+              application to receive, store, and display sensor readings for
+              monitoring.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>ESP32</li>
+                <li>Sensor integration</li>
+                <li>IoT data collection</li>
+                <li>Device-to-server communication</li>
+                <li>Flask</li>
+                <li>Python</li>
+                <li>Collaboration & teamwork</li>
+              </ul>
+            </div>
+            <p>
+              <a
+                class="action"
+                href="https://github.com/seangupta1/IoT-Environmental-Monitoring-System"
+                >click here to explore the repository</a
+              >
+            </p>
+          </article>
         </section>
 
-        <section id="projects">
-            <h2 class="header-section">projects</h2>
-            <section class="section-project">
-                <h3 class="header-project-section">software engineering</h3>
+        <section class="section-project">
+          <h3 class="header-project-section">artificial intelligence</h3>
 
-                <article class="article-project">
-                    <h4 class="header-project-title">network attached storage linux web server <span
-                            class="span-project-team">team project</span></h4>
-                    <p class="p-project-description">
-                        Our team of five students created a Linux-based network attached storage web server to allow
-                        users
-                        to create an account and store files. We implemented admin control, monitoring, oversight, and
-                        system backups.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>Collaboration & teamwork</li>
-                            <li>Problem-solving & critical thinking</li>
-                            <li>Adaptability</li>
-                            <li>Communication</li>
-                            <li>Leadership mindset</li>
-                            <li>MySQL</li>
-                            <li>Flask</li>
-                            <li>Flask-MySQLdb</li>
-                            <li>Recursion</li>
-                            <li>GitHub</li>
-                            <li>VS Code</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <a class="action"
-                        href="https://github.com/seangupta1/Network-Attached-Storage-Linux-Web-Server">click here to
-                        explore the
-                        repository</a>
-                </article>
+          <article class="article-project">
+            <h4 class="header-project-title">
+              Deep Learning Single Pedestrian Target Tracking
+            </h4>
+            <p class="p-project-description">
+              A deep learning based computer vision system that tracks a
+              selected pedestrian across an entire video by combining PyTorch
+              implementations of Faster R-CNN and a custom Siamese network. The
+              system maintains identity through crowded scenes, occlusions, and
+              target re-entry using cosine similarity and adaptive matching
+              heuristics.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>PyTorch</li>
+                <li>VS Code</li>
+                <li>Jupyter Notebooks</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <p>
+              <a
+                class="action"
+                href="https://github.com/seangupta1/deep-learning-single-pedestrian-target-tracking"
+                >click here to explore the repository</a
+              >
+            </p>
+          </article>
 
-                <article class="article-project">
-                    <h4 class="header-project-title">IoT Environment Monitoring System & Web App<span class="span-project-team">team project</span></h4>
-                    <p class="p-project-description">
-                        Our team developed an IoT environmental monitoring system and web app using an ESP32 with temperature and humidity sensors to collect and transmit data. We implemented a Flask-based web application to receive, store, and display sensor readings for monitoring.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>ESP32</li>
-                            <li>Sensor integration</li>
-                            <li>IoT data collection</li>
-                            <li>Device-to-server communication</li>
-                            <li>Flask</li>
-                            <li>Python</li>
-                            <li>Collaboration & teamwork</li>
-                        </ul>
-                    </div>
-                    <p><a class="action" href="https://github.com/seangupta1/IoT-Environmental-Monitoring-System">click here to explore the repository</a></p>
-                </article>
-            </section>
+          <article class="article-project">
+            <h4 class="header-project-title">
+              GPT-style language model - first aid advisor
+            </h4>
+            <p class="p-project-description">
+              An end-to-end pipeline to train a domain-specific GPT-style
+              language model from scratch using medical articles scraped from
+              Wikipedia categories. The project includes custom tokenizer
+              training, model pretraining, LoRA fine-tuning, quantitative and
+              qualitative evaluation, and deployment through a Flask web
+              application that provides an interactive first aid advisor.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>PyTorch</li>
+                <li>Flask</li>
+                <li>VS Code</li>
+                <li>Jupyter Notebooks</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Problem-solving & critical thinking</li>
+              </ul>
+            </div>
+            <p>
+              <a
+                class="action"
+                href="https://github.com/seangupta1/GPT-Style-Language-Model-First-Aid-Advisor"
+                >click here to explore the repository</a
+              >
+            </p>
+          </article>
 
-            <section class="section-project">
-                <h3 class="header-project-section">artificial intelligence</h3>
+          <article class="article-project">
+            <h4 class="header-project-title">
+              Deep Fake Image Detector<span class="span-project-team"
+                >team project</span
+              >
+            </h4>
+            <p class="p-project-description">
+              A deep learning system that detects whether facial images are
+              authentic or AI-generated using a custom ResNet-50 classifier
+              built in PyTorch. Designed and trained the model, tuned
+              hyperparameters, and implemented Grad-CAM visualizations to
+              explain predictions, achieving 95.8% test accuracy and a 0.9716
+              ROC-AUC on the OpenForensics dataset.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>PyTorch</li>
+                <li>Jupyter Notebooks</li>
+                <li>Python</li>
+                <li>Collaboration & teamwork</li>
+                <li>Communication</li>
+                <li>Leadership mindset</li>
+              </ul>
+            </div>
+            <p>
+              <a
+                class="action"
+                href="https://github.com/seangupta1/deep-fake-image-detector"
+                >click here to explore the repository</a
+              >
+            </p>
+          </article>
 
-                <article class="article-project">
-                    <h4 class="header-project-title">Deep Learning Single Pedestrian Target Tracking</h4>
-                    <p class="p-project-description">
-                        A deep learning based computer vision system that tracks a selected pedestrian across an entire
-                        video by combining PyTorch implementations of Faster R-CNN and a custom Siamese network. The
-                        system maintains identity through crowded scenes, occlusions, and target re-entry using cosine
-                        similarity and adaptive matching heuristics.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>PyTorch</li>
-                            <li>VS Code</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <p><a class="action"
-                            href="https://github.com/seangupta1/deep-learning-single-pedestrian-target-tracking">click
-                            here to explore
-                            the repository</a></p>
-                </article>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">GPT-style language model - first aid advisor</h4>
-                    <p class="p-project-description">
-                        An end-to-end pipeline to train a domain-specific GPT-style language model from scratch using
-                        medical articles scraped from Wikipedia categories. The project includes custom tokenizer
-                        training, model pretraining, LoRA fine-tuning, quantitative and qualitative evaluation, and
-                        deployment through a Flask web application that provides an interactive first aid advisor.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>PyTorch</li>
-                            <li>Flask</li>
-                            <li>VS Code</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Python</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Problem-solving & critical thinking</li>
-                        </ul>
-                    </div>
-                    <p><a class="action" href="https://github.com/seangupta1/GPT-Style-Language-Model-First-Aid-Advisor">click
-                            here to explore
-                            the repository</a></p>
-                </article>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">Deep Fake Image Detector<span class="span-project-team">team
-                            project</span></h4>
-                    <p class="p-project-description">
-                        A deep learning system that detects whether facial images are authentic or AI-generated using a
-                        custom ResNet-50 classifier built in PyTorch. Designed and trained the model, tuned
-                        hyperparameters, and implemented Grad-CAM visualizations to explain predictions, achieving 95.8%
-                        test accuracy and a 0.9716 ROC-AUC on the OpenForensics dataset.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>PyTorch</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Python</li>
-                            <li>Collaboration & teamwork</li>
-                            <li>Communication</li>
-                            <li>Leadership mindset</li>
-                        </ul>
-                    </div>
-                    <p><a class="action" href="https://github.com/seangupta1/deep-fake-image-detector">click here to explore
-                            the repository</a></p>
-                </article>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">ames housing machine learning complete pipeline</h4>
-                    <p class="p-project-description">
-                        An end-to-end machine learning pipeline on the Ames Housing dataset demonstrating exploratory
-                        data analysis, data preprocessing, feature engineering, and modeling for classification,
-                        regression, and clustering.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>Scikit-learn</li>
-                            <li>NumPy</li>
-                            <li>Matplotlib</li>
-                            <li>Seaborn</li>
-                            <li>Yellowbrick</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <p><a class="action"
-                            href="https://github.com/seangupta1/Ames-Housing-Machine-Learning-Complete-Pipeline">click
-                            here to explore
-                            the repository</a></p>
-                </article>
-            </section>
-
-            <section class="section-project">
-                <h3 class="header-project-section">algorithms & data structures</h3>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">m-ary tree k labeling<span class="span-project-team">team
-                            project</span></h4>
-                    <p class="p-project-description">
-                        In this project, our team of three students implemented an algorithm to solve the problem of
-                        assigning labels to the vertices of an m-ary tree while
-                        maintaining unique edge weights and vertex label constraints.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>Collaboration & teamwork</li>
-                            <li>Problem-solving & critical thinking</li>
-                            <li>Communication</li>
-                            <li>Data structures</li>
-                            <li>Recursion</li>
-                            <li>VS Code</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <a class="action" href="https://github.com/seangupta1/m-ary-tree-labeling">click here to explore the
-                        repository</a>
-                </article>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">B+ tree</h4>
-                    <p class="p-project-description">
-                        Created a B+ tree and inserted the 1,000 most common words. Then, searched the tree for a given
-                        word.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>Recursion</li>
-                            <li>VS Code</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <a class="action" href="https://github.com/seangupta1/B-Plus-Tree">click here to explore the
-                        repository</a>
-                </article>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">linear data structures comparison</h4>
-                    <p class="p-project-description">This experiment implements and compares the performance of Python's
-                        built-in list, singly linked
-                        lists, and
-                        doubly
-                        linked lists.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>VS Code</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <a class="action" href="https://github.com/seangupta1/Linear-Data-Structures-Comparison">click here
-                        to explore the
-                        repository</a>
-                </article>
-
-                <article class="article-project">
-                    <h4 class="header-project-title">search algorithms comparison</h4>
-                    <p class="p-project-description">
-                        An experiment implementing and comparing the performance of linear, sentinel, binary, and
-                        ternary search
-                        algorithms.
-                    </p>
-                    <div class="div-project-skills-container">
-                        <p class="p-project-skills-text">skills demonstrated:</p>
-                        <ul class="ul-project-skills-list">
-                            <li>Sorting & searching algorithms</li>
-                            <li>Recursion</li>
-                            <li>Big-O analysis</li>
-                            <li>VS Code</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <a class="action" href="https://github.com/seangupta1/Search-Algorithms-Comparison">click here to
-                        explore the
-                        repository</a>
-                </article>
-            </section>
+          <article class="article-project">
+            <h4 class="header-project-title">
+              ames housing machine learning complete pipeline
+            </h4>
+            <p class="p-project-description">
+              An end-to-end machine learning pipeline on the Ames Housing
+              dataset demonstrating exploratory data analysis, data
+              preprocessing, feature engineering, and modeling for
+              classification, regression, and clustering.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>Scikit-learn</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Yellowbrick</li>
+                <li>Jupyter Notebooks</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <p>
+              <a
+                class="action"
+                href="https://github.com/seangupta1/Ames-Housing-Machine-Learning-Complete-Pipeline"
+                >click here to explore the repository</a
+              >
+            </p>
+          </article>
         </section>
+
+        <section class="section-project">
+          <h3 class="header-project-section">algorithms & data structures</h3>
+
+          <article class="article-project">
+            <h4 class="header-project-title">
+              m-ary tree k labeling<span class="span-project-team"
+                >team project</span
+              >
+            </h4>
+            <p class="p-project-description">
+              In this project, our team of three students implemented an
+              algorithm to solve the problem of assigning labels to the vertices
+              of an m-ary tree while maintaining unique edge weights and vertex
+              label constraints.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>Collaboration & teamwork</li>
+                <li>Problem-solving & critical thinking</li>
+                <li>Communication</li>
+                <li>Data structures</li>
+                <li>Recursion</li>
+                <li>VS Code</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <a
+              class="action"
+              href="https://github.com/seangupta1/m-ary-tree-labeling"
+              >click here to explore the repository</a
+            >
+          </article>
+
+          <article class="article-project">
+            <h4 class="header-project-title">B+ tree</h4>
+            <p class="p-project-description">
+              Created a B+ tree and inserted the 1,000 most common words. Then,
+              searched the tree for a given word.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>Recursion</li>
+                <li>VS Code</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <a class="action" href="https://github.com/seangupta1/B-Plus-Tree"
+              >click here to explore the repository</a
+            >
+          </article>
+
+          <article class="article-project">
+            <h4 class="header-project-title">
+              linear data structures comparison
+            </h4>
+            <p class="p-project-description">
+              This experiment implements and compares the performance of
+              Python's built-in list, singly linked lists, and doubly linked
+              lists.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>VS Code</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <a
+              class="action"
+              href="https://github.com/seangupta1/Linear-Data-Structures-Comparison"
+              >click here to explore the repository</a
+            >
+          </article>
+
+          <article class="article-project">
+            <h4 class="header-project-title">search algorithms comparison</h4>
+            <p class="p-project-description">
+              An experiment implementing and comparing the performance of
+              linear, sentinel, binary, and ternary search algorithms.
+            </p>
+            <div class="div-project-skills-container">
+              <p class="p-project-skills-text">skills demonstrated:</p>
+              <ul class="ul-project-skills-list">
+                <li>Sorting & searching algorithms</li>
+                <li>Recursion</li>
+                <li>Big-O analysis</li>
+                <li>VS Code</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <a
+              class="action"
+              href="https://github.com/seangupta1/Search-Algorithms-Comparison"
+              >click here to explore the repository</a
+            >
+          </article>
+        </section>
+      </section>
     </main>
 
     <footer>
-        <a class="a-contact" href="tel:9136874871">(913)-687-4871</a>
-        <a class="a-contact" href="mailto:seangupta1@outlook.com">seangupta1@outlook.com</a>
-        <p>&copy; 2026 Sean Gupta. All rights reserved.</p>
+      <a class="a-contact" href="tel:9136874871">(913)-687-4871</a>
+      <a class="a-contact" href="mailto:seangupta1@outlook.com"
+        >seangupta1@outlook.com</a
+      >
+      <p>&copy; 2026 Sean Gupta. All rights reserved.</p>
     </footer>
-</body>
-
+  </body>
 </html>
